@@ -51,3 +51,62 @@ The sum of the absolute values of the updated array's elements is .
 Query 2: 
 Array: 
 The sum of the absolute values of the updated array's elements is .
+
+
+
+
+
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+##################################################################################################
+
+                                    SOLUTIONS
+                                    
+                                    
+ import numpy
+
+######### function to add absolute value #########
+
+def add(e):
+    x = ab(e)
+    print("ab_arr",x)
+    print("After addition of absolute value")
+    for i in range(0,len(x)):
+        for j in range(0,len(e)):
+            e[j]=e[j] + x[i]
+        print(e)
+        print(fin(e))
+    return 1
+    
+    
+######## TO CALCULATE THE FINAL SUM AFTER ADDITION OF ABSOLUTE VALUE OF e[0]######
+def fin(e):
+    print("Sum of array after addition of absolute value:")
+    ans = sum([abs(int(e[i])) for i in range(0,len(e))])
+    print(ans)
+    return 
+
+#<<<<<<<<<<<<<<<<<<<<< DONE ..... GENERATED ABSOLUTE VALUES>>>>>>>>>>>>>>>>>>   
+def ab(e):
+    ab_arr=[]
+    print("Input array:")
+    y = [e[i] for i in range(0,len(e))]
+    print(y)
+    print("Absolute value of input array")
+    for j in range(0,len(e)):
+        if (e[j]>0):
+            ab_val = (-1) * abs(e[j])
+            ab_arr.append(ab_val)
+        elif (e[j]<0):
+            ab_val = abs(e[j])
+            ab_arr.append(ab_val)
+        else :
+            ab_val =0
+            ab_arr.append(ab_val)
+    return ab_arr
+    
+r = [-1,2,-3]
+add(r)
+
