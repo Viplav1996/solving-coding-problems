@@ -1,0 +1,32 @@
+#!/bin/python3
+
+import math
+import os
+import random
+import re
+import sys
+
+#
+# Complete the 'diagonalDifference' function below.
+#
+# The function is expected to return an INTEGER.
+# The function accepts 2D_INTEGER_ARRAY arr as parameter.
+#
+
+def diagonalDifference(arr):
+    dia1 = 0
+    dia2 = 0
+    for i in range(0,n):
+        for j in range(0,n):
+            if i == j:
+                dia1 += arr[i][j]
+                
+            if (i+j) == n:
+                dia2 += arr[i][j]
+                
+    print(dia1,dia2) 
+      
+    diff = abs(dia1 - dia2)
+    
+    print(diff)
+    return diff
