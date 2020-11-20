@@ -1,0 +1,16 @@
+only valid to 3 elements:
+
+11 2 4
+4 5 6
+10 8 -12
+
+def diagonalDifference(arr):
+    for i in range(0,1):
+        for j in range(0,1):
+            dia1 = arr[i][j] + arr[i+1][j+1] + arr[i+2][j+2]
+            dia2 = arr[i][j+2] + arr[i+1][j+1] + arr[i+2][j]
+    diff = abs(dia1 - dia2)
+    print(diff)
+    return diff
+
+arr = [[11,2,4],[4,5,6], [10,8,-12]]
