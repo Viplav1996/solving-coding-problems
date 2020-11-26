@@ -1,0 +1,53 @@
+class node:
+    def __init__ (self, data=None):
+        self.data = data
+        self.next = None
+    
+class linked_list:
+    
+    def __init__(self):
+        self.head = node()
+    
+    def appe(self, data):
+        new_node = node(data)
+        cur = self.head
+        while cur.next != None:
+            cur = cur.next
+        cur.next = new_node
+    
+    def length(self):
+        cur = self.head
+        total = 0
+        while cur.next != None:
+            total+=1
+            cur = cur.next
+        return total
+    
+    def display(self):
+        ele = []
+        cur_node = self.head
+        while cur_node.next != None:
+            cur_node = cur_node.next
+            ele.append(cur_node.data)
+        return ele
+    
+    def get(self, ind):
+        if ind >= self.length():
+            print("Error, Index out of range")
+            return None
+        cur_idx =0
+        cur_node = self.head
+        while True:
+            cur_node = cur_node.next
+            if cur_idx == ind:
+                return cur_node.data
+            cur_idx+=1
+        
+
+my_list = linked_list()
+my_list.appe(1)
+my_list.appe(2)
+my_list.appe(3)
+my_list.appe(4)
+print(my_list.display())
+print(my_list.length())
