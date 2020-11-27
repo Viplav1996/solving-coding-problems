@@ -1,0 +1,17 @@
+Advance Airthmetic divisor, that's cool man
+
+For eg, Logic flow, if input is 6, advance aithmetic sum will add all the factors divisible by 6
+and that is gonna produce a sum in the last, which will be (1+2+3+6 =)12 and return it
+
+
+
+def divCal(n):
+    tot=0
+    for i in range(1,n+1):
+        if n%i == 0:
+            tot+=i
+        else :
+            pass
+    return print(tot)
+
+divCal(8)
