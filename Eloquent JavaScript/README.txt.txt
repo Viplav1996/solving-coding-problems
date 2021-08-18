@@ -1,0 +1,1 @@
+All the chapters and progess for learning JavaScript through Eloquent resources
